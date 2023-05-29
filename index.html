@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Spell Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Harry Potter Spell Quiz</h1>
+    <div id="startScreen">
+        <h2>Welcome to the Harry Potter Spell Quiz!</h2>
+        <button onclick="startQuiz()">Get Started</button>
+    </div>
+    <div id="quiz" style="display: none;">
+        <p class="question">この呪文の効果は何ですか？<br>What is the effect of this spell?: <span id="spell"></span></p>
+        <div id="options">
+            <!-- Option buttons will be inserted here -->
+        </div>
+        <div id="result"></div>
+        <p id="message"></p>  <!-- Add this line -->
+        <p>スコア：Score: <span id="score">0</span></p>
+        <button onclick="generateQuestion()">Next</button>
+        <button id="showWordsButton" onclick="showWords()">Learn Words</button>
+        <table id="words" style="display: none;">
+            <thead>
+                <tr>
+                    <th>単語の意味 (English)</th>
+                    <th>単語の意味 (日本語)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Word meanings will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="overlay dark-overlay" id="darkOverlay"></div>
+    <div class="overlay light-overlay" id="lightOverlay"></div>
+    <div class="wand-container" id="wandContainer">
+        <img src="https://i.imgur.com/RUEhyDP.png" alt="Wand" id="wand" />
+        <img src="https://i.imgur.com/RUEhyDP.png" alt="Fire" class="fire" id="fire" />
+    <img src="https://i.imgur.com/lGlggA2.png" alt="Smoke" class="smoke" id="smoke" />
+    </div>
+
+    <div id="wand-effects" class="wand-animation"></div>
+      
+    <div id="scoreDisplay" style="display: none;">
+        <h2>クイズ終了！Quiz Finished!</h2>
+        <p>あなたのスコアは：<span id="finalScore"></span></p>
+        <p id="finalMessage"></p> 
+    </div>
+    
+    <script src="js/script.js"></script>
+    <style>
+        #result {
+            color: white;
+            font-size: 20px;
+        }
+        
+        #spell {
+            font-size: 45px;
+        }
+    </style>
+    
+</body>
+</html>

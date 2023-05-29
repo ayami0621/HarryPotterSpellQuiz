@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+}
+
+body {
+    background-image: url('https://i.imgur.com/Q43SlM4.png');
+    background-color: #f3f3f3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* メディアクエリを追加し、スマホ用の背景画像設定を追加 */
+@media (max-width: 896px) {
+    body {
+        background-size: auto 100%;
+        background-position: center center;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.wand-animation {
+    animation: fadeIn 1s ease-in-out;
+    width: 100px;
+    height: 100px;
+}
+
+.wand-glowing {
+    background-image: url('https://i.imgur.com/RUEhyDP.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wand-smoke {
+    background-image: url('https://i.imgur.com/lGlggA2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#wand-effects {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #f8f3f3;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #f8f3f3;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+p {
+    font-size: 1.7rem;
+    text-align: center;
+    color: #f8f3f3;
+}
+
+#finalMessage {
+    font-family: 'Cormorant Garamond', serif;  /* フォントを指定 */
+    font-size: 2.5rem;  /* フォントサイズを指定、これは例なので必要に応じて調整してください */
+    color: #f8f3f3;  /* フォントカラーを指定、これも例なので必要に応じて調整してください */
+}
+
+button {
+    font-size: 1.2rem;
+    background-color: #a36b2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d4a75a;
+}
+
+/* 選択肢の背景色とフォントサイズを変更 */
+#options button {
+    background-color: #464184;
+    font-size: 16px; /* 適切なサイズに変更 */
+}
+
+table {
+    font-size: 1rem;
+    color: #f8f3f3;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #a36b2f;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.light-overlay {
+  background-color: rgba(248, 246, 246, -1);
+}
+
+.wand-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.fire,
+.smoke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+   
