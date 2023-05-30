@@ -301,7 +301,7 @@ function showWords() {
 
         // スコアに応じたメッセージを表示する機能を追加
         let message;
-        if (score >= 0 ) {
+        if (score = 0 ) {
             message = "You are definitely friends with Dudley.";
         } else if (score >= 1 && score <= 3) {
             message = "It seems too early to become a wizard.";
