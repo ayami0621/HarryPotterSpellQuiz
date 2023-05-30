@@ -88,7 +88,7 @@ p {
 
 #finalMessage {
     font-family: 'Cormorant Garamond', serif;  /* フォントを指定 */
-    font-size: 2.5rem;  /* フォントサイズを指定、これは例なので必要に応じて調整してください */
+    font-size: 2rem;  /* フォントサイズを指定、これは例なので必要に応じて調整してください */
     color: #f8f3f3;  /* フォントカラーを指定、これも例なので必要に応じて調整してください */
 }
 
